@@ -5,29 +5,35 @@ def research_topic(topic):
     prompt = f"""
 You are an expert AI Research Assistant.
 
-Research the following topic:
+Generate a well-structured research report on:
 
-{topic}
+Topic: {topic}
 
-Return your answer in this format:
+Rules:
+- Keep the total length between 400 and 600 words.
+- Use simple English.
+- Give clear headings.
+- Use bullet points wherever appropriate.
+
+Format:
 
 # Title
 
-## Overview
+## Introduction
 
-## Key Concepts
+## What is it?
+
+## Key Features
 
 ## Advantages
 
-## Challenges
+## Disadvantages
 
-## Real World Applications
+## Real-world Applications
 
 ## Future Scope
 
 ## Conclusion
-
-Make the explanation beginner-friendly.
 """
 
     return ask_ollama(prompt)
